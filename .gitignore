@@ -17,6 +17,10 @@ __pycache__/
 *.aab
 .idea/
 .vscode/
+.agents/
+antislop.md
+AGENTS.md
+GEMINI.md
 local.properties
 Thumbs.db
 Desktop.ini
