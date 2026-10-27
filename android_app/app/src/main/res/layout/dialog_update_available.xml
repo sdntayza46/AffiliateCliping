@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_bg"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- HEADER DIALOG -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚀"
+                android:textSize="22sp"
+                android:layout_marginEnd="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pembaruan Tersedia!"
+                    android:textColor="@color/text_title"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvReleaseDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="GitHub Releases"
+                    android:textColor="@color/brand_blue_light"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCloseUpdateDialog"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:text="✕"
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- VERSION BADGE ROW -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Versi Saat Ini:"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvCurrentVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="v1.3.3"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="➔"
+            android:textColor="@color/brand_blue_light"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="10dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Versi Terbaru:"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvLatestVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="v1.3.3"
+                android:textColor="@color/accent_emerald_glow"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvApkSizeBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="~87 MB"
+            android:textColor="@color/brand_blue_light"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- CHANGELOG HEADER & CONTENT -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catatan Rilis / Apa yang Baru:"
+        android:textColor="@color/text_title"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="6dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="160dp"
+        android:background="@drawable/input_bg"
+        android:padding="12dp"
+        android:layout_marginBottom="14dp">
+
+        <TextView
+            android:id="@+id/tvChangelog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Memuat rincian perubahan..."
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:lineSpacingExtra="3dp" />
+    </ScrollView>
+
+    <!-- DOWNLOAD PROGRESS CONTAINER (Initially Hidden) -->
+    <LinearLayout
+        android:id="@+id/layoutDownloadProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginBottom="12dp">
+
+        <ProgressBar
+            android:id="@+id/progressDownloadApk"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_seekbar_track" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/tvDownloadProgressDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Mengunduh: 0 MB / 0 MB"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvDownloadPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="0%"
+                android:textColor="@color/brand_blue_light"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- ACTION BUTTONS -->
+    <Button
+        android:id="@+id/btnDownloadUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@drawable/button_gradient_primary"
+        app:backgroundTint="@null"
+        android:text="Download &amp; Update Sekarang"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp" />
+
+    <Button
+        android:id="@+id/btnLaterUpdate"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        android:text="Nanti Saja"
+        android:textColor="@color/text_muted"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+# Gradle & Android build artifacts
+.gradle/
+build/
+android_app/.gradle/
+android_app/build/
+android_app/app/build/
+local.properties
+*.apk
+*.aab
+
+# Temp video processing directories & test media
+temp/
+output/
+__pycache__/
+*.pyc
+*.idsig
+*.mp4
+data/keys.json
+*.m4a
+*.wav
+*.ts
+*.aac
+*.tmp
+*.log
+
+# IDE & OS files
+.idea/
+*.iml
+.vscode/
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- HEADER BANNER: Modern Liquid Glass Iridescent Banner -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/header_gradient_bg"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="32dp"
+                android:paddingBottom="46dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dantez Cliping"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.02" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:background="@drawable/badge_active"
+                                android:paddingHorizontal="6dp"
+                                android:paddingVertical="2dp"
+                                android:text="LIQUID"
+                                android:textColor="@color/brand_blue_light"
+                                android:textSize="9sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvHeaderSubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="dantez x mamank recing — Native v1.3.3"
+                            android:textColor="#BAE6FD"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/btnMenuSettings"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/circle_menu_bg"
+                        android:contentDescription="Pengaturan"
+                        android:padding="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_more_vert"
+                        android:elevation="4dp" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <!-- MAIN CONTENT CARDS CONTAINER (Elevated Liquid Glass Overlap) -->
+            <LinearLayout
+                android:id="@+id/layoutMainCards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-26dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="36dp"
+                android:animateLayoutChanges="true">
+
+                <!-- 1. VIDEO SELECTOR CARD -->
+                <LinearLayout
+                    android:id="@+id/cardVideoSelector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_bg"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="14dp"
+                    android:animateLayoutChanges="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Video Sumber (Lokal HP)"
+                            android:textColor="@color/text_title"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/badge_active"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="3dp"
+                            android:text="⚡ Zero-Copy"
+                            android:textColor="@color/brand_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.02" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Memproses langsung dari memori HP tanpa perlu upload internet!"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+
+                    <!-- File Terpilih Info -->
+                    <LinearLayout
+                        android:id="@+id/layoutSelectedFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/input_bg"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:visibility="gone"
+                        android:animateLayoutChanges="true"
+                        tools:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvSelectedFileName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="middle"
+                                android:maxLines="1"
+                                android:text="Screenrecorder_2026.mp4"
+                                android:textColor="@color/text_title"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvSelectedFileSize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="Durasi: 01:45 | Ukuran: 85.2 MB"
+                                android:textColor="@color/brand_blue_light"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnClearFile"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:minWidth="0dp"
+                            android:padding="0dp"
+                            android:text="✕"
+                            android:textColor="@color/accent_red"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnSelectVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/button_liquid_glass"
+                        app:backgroundTint="@null"
+                        android:text="📁 PILIH REKAMAN LAYAR / GALERI"
+                        android:textColor="@color/brand_blue_light"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.03"
+                        android:elevation="2dp" />
+                </LinearLayout>
+
+                <!-- 2. CONFIGURATION (Duration, Resolution) -->
+                <LinearLayout
+                    android:id="@+id/cardConfig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_bg"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="14dp"
+                    android:animateLayoutChanges="true">
+
+                    <!-- Duration -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Target Durasi Klip"
+                        android:textColor="@color/text_title"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinnerDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/input_bg"
+                        android:paddingHorizontal="14dp" />
+
+                    <!-- Custom Duration Input Form -->
+                    <LinearLayout
+                        android:id="@+id/layoutCustomDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:animateLayoutChanges="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Batas Maksimal:"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/etCustomDuration"
+                            android:layout_width="0dp"
+                            android:layout_height="42dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/input_bg"
+                            android:hint="Misal: 45"
+                            android:inputType="number"
+                            android:paddingHorizontal="12dp"
+                            android:textColor="@color/text_title"
+                            android:textColorHint="@color/text_muted"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="detik"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="14dp"
+                        android:background="#1538BDF8" />
+
+                    <!-- Resolution -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Resolusi Video Vertikal (9:16)"
+                        android:textColor="@color/text_title"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/rgResolution"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb1080p"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/brand_blue_light"
+                            android:checked="true"
+                            android:text="1080p (Full HD)"
+                            android:textColor="@color/text_title"
+                            android:textSize="12sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb720p"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/brand_blue_light"
+                            android:checked="false"
+                            android:text="720p (HD)"
+                            android:textColor="@color/text_title"
+                            android:textSize="12sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <!-- 3. CROP & ZOOM SLIDERS (SCALE & Y-OFFSET) -->
+                <LinearLayout
+                    android:id="@+id/cardCropZoom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_bg"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="Crop &amp; Zoom (Buang Bar Status HP)"
+                            android:textColor="@color/text_title"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnResetCrop"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:minWidth="0dp"
+                            android:paddingHorizontal="10dp"
+                            android:text="Reset"
+                            android:textColor="@color/brand_blue_light"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <!-- LIVE 9:16 VIDEO PREVIEW CONTAINER -->
+                    <FrameLayout
+                        android:id="@+id/cardPreviewContainer"
+                        android:layout_width="162dp"
+                        android:layout_height="288dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@drawable/card_phone_bezel"
+                        android:clipChildren="true"
+                        android:clipToPadding="true"
+                        android:clipToOutline="true"
+                        android:elevation="6dp">
+
+                        <TextureView
+                            android:id="@+id/previewTextureView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center" />
+
+                        <!-- Live Watermark Overlay -->
+                        <TextView
+                            android:id="@+id/tvPreviewWatermark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="#50FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <!-- Placeholder before video is selected -->
+                        <LinearLayout
+                            android:id="@+id/layoutPreviewPlaceholder"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🎬"
+                                android:textSize="32sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:text="Pilih video rekaman di atas untuk live preview 9:16"
+                                android:textColor="#94A3B8"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <!-- Top 9:16 Badge -->
+                        <TextView
+                            android:id="@+id/tvPreviewBadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|start"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/badge_active"
+                            android:paddingHorizontal="7dp"
+                            android:paddingVertical="3dp"
+                            android:text="PREVIEW 9:16"
+                            android:textColor="@color/brand_blue_light"
+                            android:textSize="8sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <!-- Play / Pause Overlay Button -->
+                        <ImageButton
+                            android:id="@+id/btnPreviewPlayPause"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/circle_menu_bg"
+                            android:src="@android:drawable/ic_media_play"
+                            android:visibility="gone"
+                            android:elevation="4dp" />
+                    </FrameLayout>
+
+                    <!-- Zoom Slider -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Scale / Zoom:"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvZoomValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="100%"
+                            android:textColor="@color/brand_blue_light"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <SeekBar
+                        android:id="@+id/seekBarZoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:max="30"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/custom_seekbar_track"
+                        android:thumb="@drawable/custom_seekbar_thumb"
+                        android:splitTrack="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Geser kanan untuk membuang status bar jam, sinyal &amp; tombol bawah"
+                        android:textColor="@color/text_muted"
+                        android:textSize="10sp" />
+
+                    <!-- Sharpening (Contrast Adaptive Sharpening / CAS) Slider -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contrast Adaptive Sharpening (CAS):"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvSharpenValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="Off (0%)"
+                            android:textColor="@color/brand_blue_light"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <SeekBar
+                        android:id="@+id/seekBarSharpen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/custom_seekbar_track"
+                        android:thumb="@drawable/custom_seekbar_thumb"
+                        android:splitTrack="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Pertajam detail dan tekstur produk (CAS) tanpa noise berlebih"
+                        android:textColor="@color/text_muted"
+                        android:textSize="10sp" />
+
+                    <!-- Vertical Offset Slider -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Geser Posisi Vertikal:"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvYOffsetValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="0%"
+                            android:textColor="@color/brand_blue_light"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <SeekBar
+                        android:id="@+id/seekBarYOffset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:max="30"
+                        android:progress="15"
+                        android:progressDrawable="@drawable/custom_seekbar_track"
+                        android:thumb="@drawable/custom_seekbar_thumb"
+                        android:splitTrack="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Atur titik fokus tampilan ke tengah, atas, atau bawah"
+                        android:textColor="@color/text_muted"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- 4. ACTION BUTTON: Luminous Liquid Neon Pill Gradient Button -->
+                <Button
+                    android:id="@+id/btnStartProcess"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/button_gradient_primary"
+                    app:backgroundTint="@null"
+                    android:text="⚡ PROSES AUTO CLIP SEKARANG"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.04"
+                    android:elevation="8dp" />
+
+                <!-- 5. PROGRESS & LIVE LOGS -->
+                <LinearLayout
+                    android:id="@+id/layoutProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/card_bg"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:visibility="gone"
+                    android:animateLayoutChanges="true"
+                    tools:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvProgressStage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Memulai proses..."
+                            android:textColor="@color/text_title"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvProgressPercent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="0%"
+                            android:textColor="@color/brand_blue_light"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:max="100"
+                        android:progress="0"
+                        app:indicatorColor="@color/brand_cyan"
+                        app:trackColor="@color/brand_blue_deep"
+                        app:trackCornerRadius="6dp"
+                        app:trackThickness="10dp" />
+
+                    <!-- Animated activity pulse -->
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressPulse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:indeterminate="true"
+                        app:indicatorColor="@color/brand_blue_light"
+                        app:trackColor="@android:color/transparent"
+                        app:trackCornerRadius="2dp"
+                        app:trackThickness="3dp" />
+
+                    <!-- Background Service Badge Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/badge_active"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚡"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="Aman diminimize! Proses berjalan di Background Service."
+                            android:textColor="@color/brand_blue_light"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Toggle Collapsible Console Logs -->
+                    <LinearLayout
+                        android:id="@+id/btnToggleLogs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingVertical="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:id="@+id/tvLogsChevron"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="▶"
+                            android:textColor="@color/brand_blue_light"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tvLogsToggleTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Lihat Log Console Proses"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:id="@+id/scrollLogs"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/input_bg"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvLogs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:textColor="#A7F3D0"
+                            android:textSize="10sp" />
+                    </ScrollView>
+
+                    <!-- Tombol Batalkan Proses -->
+                    <Button
+                        android:id="@+id/btnCancelProcess"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="#2D1515"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="BATALKAN PROSES"
+                        android:textColor="@color/accent_red"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+
+                <!-- 6. COMPLETED RESULT CARD -->
+                <LinearLayout
+                    android:id="@+id/layoutResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/card_bg"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:visibility="gone"
+                    android:animateLayoutChanges="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✅ Ekspor Video Berhasil!"
+                        android:textColor="@color/accent_emerald_glow"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvResultPath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Tersimpan di: Galeri / AutoClip.mp4"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+
+                    <!-- DYNAMIC LIST OF RENDERED VIDEOS -->
+                    <LinearLayout
+                        android:id="@+id/layoutRenderedVideosList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical"
+                        android:animateLayoutChanges="true" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

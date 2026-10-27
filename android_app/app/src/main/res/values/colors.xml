@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Liquid Glass Canvas & Deep Cosmic Obsidian -->
+    <color name="bg_dark">#060913</color>
+    <color name="bg_main">#060913</color>
+    <color name="bg_card">#0F172A</color>
+    <color name="card_dark">#0F172A</color>
+    <color name="bg_input">#090E1A</color>
+
+    <!-- Liquid Glass Specular & Frosted Rim -->
+    <color name="card_border">#223250</color>
+    <color name="card_border_subtle">#16233B</color>
+    <color name="glass_rim">#38BDF8</color>
+    <color name="glass_rim_soft">#3360A5FA</color>
+    <color name="glass_specular">#2A3C60</color>
+    <color name="glass_fill_light">#16233B</color>
+    <color name="glass_fill_dark">#0B1220</color>
+
+    <!-- Liquid Electric Neon Accents (Cyan -> Royal Blue -> Violet) -->
+    <color name="brand_blue">#2563EB</color>
+    <color name="brand_blue_dark">#1D4ED8</color>
+    <color name="brand_blue_deep">#0F1E3D</color>
+    <color name="brand_blue_light">#38BDF8</color>
+    <color name="brand_blue_glow">#60A5FA</color>
+    <color name="brand_blue_soft">#172554</color>
+    <color name="brand_blue_tint">#0D1933</color>
+    <color name="brand_cyan">#06B6D4</color>
+    <color name="brand_cyan_glow">#22D3EE</color>
+    <color name="brand_violet">#7C3AED</color>
+    <color name="brand_violet_glow">#A78BFA</color>
+
+    <!-- Compatibility aliases with existing layout & code references -->
+    <color name="brand_purple">#38BDF8</color>
+    <color name="brand_purple_dark">#60A5FA</color>
+    <color name="brand_purple_light">#93C5FD</color>
+    <color name="brand_purple_soft">#16233B</color>
+    <color name="brand_purple_tint">#0D182E</color>
+    <color name="brand_gradient_start">#06B6D4</color>
+    <color name="brand_gradient_mid">#2563EB</color>
+    <color name="brand_gradient_end">#7C3AED</color>
+    <color name="brand_gradient_accent">#38BDF8</color>
+
+    <!-- Crisp Typography & Glass Luminous Text -->
+    <color name="text_title">#FFFFFF</color>
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#64748B</color>
+    <color name="text_on_brand">#FFFFFF</color>
+
+    <!-- Functional Accents -->
+    <color name="accent_emerald">#10B981</color>
+    <color name="accent_emerald_glow">#34D399</color>
+    <color name="accent_emerald_dark">#064E3B</color>
+    <color name="accent_amber">#F59E0B</color>
+    <color name="accent_amber_soft">#78350F</color>
+    <color name="accent_red">#F43F5E</color>
+    <color name="accent_red_dark">#881337</color>
+
+    <!-- Neutrals & Glass Overlays -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="button_primary">#2563EB</color>
+    <color name="button_primary_text">#FFFFFF</color>
+    <color name="overlay_black_50">#80000000</color>
+    <color name="overlay_white_10">#1AFFFFFF</color>
+    <color name="overlay_white_20">#33FFFFFF</color>
+    <color name="overlay_white_30">#4DFFFFFF</color>
+</resources>

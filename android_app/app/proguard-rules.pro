@@ -1,0 +1,3 @@
+-keep class com.dantez.autoclip.data.** { *; }
+-keep class com.arthenica.ffmpegkit.** { *; }
+-dontwarn com.arthenica.ffmpegkit.**
