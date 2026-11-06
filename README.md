@@ -8,13 +8,14 @@ Turn long stream replays and screen recordings into short 9:16 clips for affilia
 
 Grab the latest Android APK directly:
 
-- **Latest Release:** [Dantez Cliping v1.4.3](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.3)
-- **Direct APK Download:** [DantezCliping_v1.4.3.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.3/DantezCliping_v1.4.3.apk)
+- **Latest Release:** [Dantez Cliping v1.4.4](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.4)
+- **Direct APK Download:** [DantezCliping_v1.4.4.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.4/DantezCliping_v1.4.4.apk)
 
 ---
 
 ## What It Does
 - **Studio Video Editor UI:** Top 9:16 interactive preview canvas with horizontal workspace tabs (`Format`, `Framing`, `Shield & FX`, `Clips`).
+- **CAS 0.9 & Unsharp BT.709 Mastering (`5M` MediaCodec):** Final render pass applies `colorspace=all=bt709:iall=bt709:fast=1,format=yuv420p,cas=0.9,unsharp=5:5:1.2:5:5:0.0` with `5M` H.264 MediaCodec and `128k` AAC audio.
 - **Multi-Account Anti-Duplicate Matrix + mvhd Max Patch:** Exporting 2–5 clips automatically gives each clip a unique fingerprint (alternating horizontal mirror, black frame thickness/shade, micro-pan/zoom, vocal pitch/EQ, and opening hook order) combined with the `mvhd max` container patch.
 - **Originality Shield:** Toggle horizontal mirror (`hflip`), subtle color grading (`+2%` contrast / `+3%` saturation), audio pitch shift (`+3%`), clean black frame, and speed/luma micro-grain without altering product colors.
 - **Hybrid Fast-Seek & Exact A/V Sync:** Fast keyframe pre-seeking combined with millisecond-accurate `trim`/`atrim` and `48 kHz` sample-rate normalization for zero lip-sync drift on long 12+ minute recordings.
@@ -28,7 +29,8 @@ Need a specific past build? All releases are archived below:
 
 | Version | Release Notes | Direct APK Download |
 | :--- | :--- | :--- |
-| **v1.4.3 (Latest)** | [Release v1.4.3](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.3) | [DantezCliping_v1.4.3.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.3/DantezCliping_v1.4.3.apk) |
+| **v1.4.4 (Latest)** | [Release v1.4.4](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.4) | [DantezCliping_v1.4.4.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.4/DantezCliping_v1.4.4.apk) |
+| **v1.4.3** | [Release v1.4.3](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.3) | [DantezCliping_v1.4.3.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.3/DantezCliping_v1.4.3.apk) |
 | **v1.4.2** | [Release v1.4.2](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.2) | [DantezCliping_v1.4.2.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.2/DantezCliping_v1.4.2.apk) |
 | **v1.4.1** | [Release v1.4.1](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.1) | [DantezCliping_v1.4.1.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.1/DantezCliping_v1.4.1.apk) |
 | **v1.4.0** | [Release v1.4.0](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.0) | [DantezCliping_v1.4.0.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.0/DantezCliping_v1.4.0.apk) |
