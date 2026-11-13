@@ -8,16 +8,16 @@ Turn long stream replays and screen recordings into short 9:16 clips for affilia
 
 Grab the latest Android APK directly:
 
-- **Latest Release:** [Dantez Cliping v1.4.5](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.5)
-- **Direct APK Download:** [DantezCliping_v1.4.5.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.5/DantezCliping_v1.4.5.apk)
+- **Latest Release:** [Dantez Cliping v1.4.9](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.9)
+- **Direct APK Download:** [DantezCliping_v1.4.9.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.9/DantezCliping_v1.4.9.apk)
 
 ---
 
 ## What It Does
 - **Batch Clipping (Multi-Video Queue):** Select multiple recordings at once from the gallery or tap `+ Add` to queue several videos and process them sequentially in one run.
 - **Studio Video Editor UI:** Top 9:16 interactive preview canvas with horizontal workspace tabs (`Format`, `Framing`, `Shield & FX`, `Clips`).
-- **Optional HD Sharpen (`CAS 0.9 + Unsharp + BT.709`):** Toggleable in `Shield & FX` (off by default) to apply `colorspace=all=bt709:iall=bt709:fast=1,format=yuv420p,cas=0.9,unsharp=5:5:1.2:5:5:0.0` at `5M` MediaCodec.
-- **Multi-Account Anti-Duplicate Matrix + mvhd Max Patch:** Exporting 2–5 clips automatically gives each clip a unique fingerprint (alternating horizontal mirror, black frame thickness/shade, micro-pan/zoom, vocal pitch/EQ, and opening hook order) combined with the `mvhd max` container patch.
+- **Clean `libx264` Ultrafast (BT.709) Engine:** Uses `libx264 -preset ultrafast` with `cabac=1`, `deblock`, `aq-mode=1`, `bicubic` scaling, and locked `BT.709` color metadata (`3500k` 720p / `5500k` 1080p) without harsh `CAS`/`Unsharp` artifacts.
+- **Multi-Account Anti-Duplicate Matrix + SLSR Container Method:** Exporting 2–5 clips automatically gives each clip a unique fingerprint (alternating horizontal mirror, black frame thickness/shade, micro-pan/zoom, vocal pitch/EQ, and opening hook order) finalized with streaming SLSR MP4 patching.
 - **Hybrid Fast-Seek & Exact A/V Sync:** Fast keyframe pre-seeking combined with millisecond-accurate `trim`/`atrim` and `48 kHz` sample-rate normalization for zero lip-sync drift on long 12+ minute recordings.
 - **In-App Updates:** Check and install new builds directly inside the app.
 
@@ -29,7 +29,8 @@ Need a specific past build? All releases are archived below:
 
 | Version | Release Notes | Direct APK Download |
 | :--- | :--- | :--- |
-| **v1.4.5 (Latest)** | [Release v1.4.5](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.5) | [DantezCliping_v1.4.5.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.5/DantezCliping_v1.4.5.apk) |
+| **v1.4.9 (Latest)** | [Release v1.4.9](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.9) | [DantezCliping_v1.4.9.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.9/DantezCliping_v1.4.9.apk) |
+| **v1.4.5** | [Release v1.4.5](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.5) | [DantezCliping_v1.4.5.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.5/DantezCliping_v1.4.5.apk) |
 | **v1.4.4** | [Release v1.4.4](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.4) | [DantezCliping_v1.4.4.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.4/DantezCliping_v1.4.4.apk) |
 | **v1.4.3** | [Release v1.4.3](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.3) | [DantezCliping_v1.4.3.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.3/DantezCliping_v1.4.3.apk) |
 | **v1.4.2** | [Release v1.4.2](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.2) | [DantezCliping_v1.4.2.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.2/DantezCliping_v1.4.2.apk) |
