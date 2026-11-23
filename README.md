@@ -8,8 +8,8 @@ Turn long stream replays and screen recordings into short 9:16 clips for affilia
 
 Grab the latest Android APK directly:
 
-- Latest Release: [FakeCLiping v1.5.0](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.5.0)
-- Direct APK Download: [FakeCLiping_v1.5.0.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.5.0/FakeCLiping_v1.5.0.apk)
+- Latest Release: [FakeCLiping v1.6.0](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.6.0)
+- Direct APK Download: [FakeCLiping_v1.6.0.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.6.0/FakeCLiping_v1.6.0.apk)
 
 ---
 
@@ -18,6 +18,8 @@ Grab the latest Android APK directly:
 - Studio Video Editor UI: Top 9:16 interactive preview canvas with horizontal workspace tabs (`Format`, `Framing`, `Shield & FX`, `Clips`).
 - Fast Hardware Render: Uses MediaCodec hardware encoding with automatic fallback, clean color preservation, and finalized container output.
 - Smart Product Zoom: Automatically applies a smooth slow zoom-in on product highlights and color variants.
+- 7 App Themes: Default, Pixel Art, Liquid Glass, Terminal, Hand-Drawn, Manga, and Neo-Brutalism, switchable in Studio Settings.
+- Recording Trim: Cut the start and end of a recording with a live preview before processing, per video in batch mode.
 - Multi-Account Anti-Duplicate Matrix: Exporting 2–5 clips gives each clip a unique fingerprint (alternating horizontal mirror, frame border, micro-pan, vocal pitch/EQ, and hook order).
 - In-App Updates: Check and install new builds directly inside the app.
 
@@ -29,7 +31,8 @@ Need a specific past build? All releases are archived below:
 
 | Version | Release Notes | Direct APK Download |
 | :--- | :--- | :--- |
-| v1.5.0 (Latest) | [Release v1.5.0](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.5.0) | [FakeCLiping_v1.5.0.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.5.0/FakeCLiping_v1.5.0.apk) |
+| v1.6.0 (Latest) | [Release v1.6.0](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.6.0) | [FakeCLiping_v1.6.0.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.6.0/FakeCLiping_v1.6.0.apk) |
+| v1.5.0 | [Release v1.5.0](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.5.0) | [FakeCLiping_v1.5.0.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.5.0/FakeCLiping_v1.5.0.apk) |
 | **v1.4.9** | [Release v1.4.9](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.9) | [DantezCliping_v1.4.9.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.9/DantezCliping_v1.4.9.apk) |
 | **v1.4.5** | [Release v1.4.5](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.5) | [DantezCliping_v1.4.5.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.5/DantezCliping_v1.4.5.apk) |
 | **v1.4.4** | [Release v1.4.4](https://github.com/sdntayza46/AffiliateCliping/releases/tag/v1.4.4) | [DantezCliping_v1.4.4.apk](https://github.com/sdntayza46/AffiliateCliping/releases/download/v1.4.4/DantezCliping_v1.4.4.apk) |
